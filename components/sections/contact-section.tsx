@@ -17,7 +17,7 @@ export function ContactSection() {
         {/* Encabezado */}
         <div className="text-center mb-16">
           <span className="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4 border border-primary/20">
-            📍 Encúntranos
+            📍 Encuentranos
           </span>
           <h2 className="font-heading font-bold text-3xl md:text-5xl text-foreground mb-4">
             ¡<span className="text-gradient-primary">Contáctanos</span>!
