@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Work_Sans, Open_Sans } from "next/font/google"
 import "./globals.css"
+import { BUSINESS } from "@/lib/constants"
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -18,10 +19,14 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Tacos de Canasta - Sabor Auténtico Mexicano",
-  description:
-    "Deliciosos tacos de canasta hechos con amor y recetas tradicionales. ¡Prueba el auténtico sabor de México!",
-  generator: "v0.app",
+  title: `${BUSINESS.name} — ${BUSINESS.tagline}`,
+  description: BUSINESS.description,
+  openGraph: {
+    title: `${BUSINESS.name} — ${BUSINESS.tagline}`,
+    description: BUSINESS.description,
+    locale: "es_MX",
+    type: "website",
+  },
 }
 
 export default function RootLayout({
