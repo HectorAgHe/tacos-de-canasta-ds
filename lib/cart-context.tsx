@@ -22,6 +22,7 @@ interface CartContextValue {
   clearCart: () => void
   openCart: () => void
   closeCart: () => void
+  toggleCart: () => void
   sendWhatsAppOrder: () => void
 }
 
@@ -82,6 +83,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const clearCart = useCallback(() => setItems([]), [])
   const openCart = useCallback(() => setIsOpen(true), [])
   const closeCart = useCallback(() => setIsOpen(false), [])
+  const toggleCart = useCallback(() => setIsOpen((prev) => !prev), [])
 
   const sendWhatsAppOrder = useCallback(() => {
     if (items.length === 0) return
@@ -108,6 +110,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         clearCart,
         openCart,
         closeCart,
+        toggleCart,
         sendWhatsAppOrder,
       }}
     >

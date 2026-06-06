@@ -15,7 +15,7 @@ const NAV_LINKS = [
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const { itemCount, openCart } = useCart()
+  const { itemCount, openCart, toggleCart } = useCart()
 
   const closeMobile = () => setMobileOpen(false)
 
@@ -49,7 +49,7 @@ export function Header() {
           {/* Botón carrito */}
           <button
             aria-label={`Ver pedido (${itemCount} items)`}
-            onClick={openCart}
+            onClick={toggleCart}
             className="relative p-2 text-foreground hover:text-primary transition-colors"
           >
             <ShoppingBasket size={22} />
